@@ -23,165 +23,79 @@
 
   <groupId>org.fusebyexample.examples</groupId>
   <artifactId>hl7-example</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
-  <name>JBoss Fuse Camel Component - HL7 Example</name>
+  <name>HL7 Example: Parent POM</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <fabric8.parentProfiles>feature-camel</fabric8.parentProfiles>                                                       
     <fabric8.profile>demo-hl7</fabric8.profile>
-    <fabric8.features>camel-jackson camel-cxf</fabric8.features>               
-    <fabric8.featureRepos>mvn:org.apache.camel.karaf/apache-camel/${version:camel}/xml/features</fabric8.featureRepos>
-    <jboss.fuse.bom.version>6.1.0.redhat-379</jboss.fuse.bom.version>
-    <fabric.version>1.0.0.redhat-379</fabric.version>
-    <!--
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <camel.version>2.12.0.redhat-610379</camel.version>
     <cxf.version>2.7.0.redhat-610379</cxf.version>
     <spring.version>3.2.8.RELEASE</spring.version>
-    <slf4j.version>1.6.6</slf4j.version>  -->
-    <hapi.version>2.1</hapi.version> 
+    <slf4j.version>1.6.6</slf4j.version>
+    <hapi.version>2.1</hapi.version>
   </properties>
 
-<repositories>
+  <repositories>
     <repository>
-      <id>release.fusesource.org</id>
+      <id>fusesource.releases</id>
       <name>FuseSource Release Repository</name>
-      <url>http://repo.fusesource.com/nexus/content/repositories/releases</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
+      <url>https://repo.fusesource.com/nexus/content/groups/public</url>
       <releases>
         <enabled>true</enabled>
       </releases>
-    </repository>
-    <repository>
-     <id>ea.fusesource.org</id>
-     <name>FuseSource Community Early Access Release Repository</name>
-     <url>http://repo.fusesource.com/nexus/content/groups/ea</url>
-     <snapshots>
-      <enabled>false</enabled>
-     </snapshots>
-     <releases>
-      <enabled>true</enabled>
-     </releases>
-    </repository>    
-    <repository>
-      <id>snapshot.fusesource.org</id>
-      <name>FuseSource Snapshot Repository</name>
-      <url>http://repo.fusesource.com/nexus/content/repositories/snapshots</url>
       <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
         <enabled>false</enabled>
-      </releases>
+      </snapshots>
     </repository>
   </repositories>
   <pluginRepositories>
     <pluginRepository>
-      <id>release.fusesource.org</id>
+      <id>fusesource.releases</id>
       <name>FuseSource Release Repository</name>
-      <url>http://repo.fusesource.com/nexus/content/repositories/releases</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
+      <url>https://repo.fusesource.com/nexus/content/groups/public</url>
       <releases>
         <enabled>true</enabled>
       </releases>
-    </pluginRepository>
-    <pluginRepository>
-     <id>ea.fusesource.org</id>
-     <name>FuseSource Community Early Access Release Repository</name>
-     <url>http://repo.fusesource.com/nexus/content/groups/ea</url>
-     <snapshots>
-      <enabled>false</enabled>
-     </snapshots>
-     <releases>
-      <enabled>true</enabled>
-     </releases>
-    </pluginRepository>      
-    <pluginRepository>
-      <id>snapshot.fusesource.org</id>
-      <name>FuseSource Snapshot Repository</name>
-      <url>http://repo.fusesource.com/nexus/content/repositories/snapshots</url>
       <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
         <enabled>false</enabled>
-      </releases>
+      </snapshots>
     </pluginRepository>
   </pluginRepositories>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.jboss.fuse.bom</groupId>
-                <artifactId>jboss-fuse-parent</artifactId>
-                <version>${jboss.fuse.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-  
- <build>
-    <defaultGoal>install</defaultGoal>
-
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.5.1</version>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>2.6</version>
-        <configuration>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
-
-      <!-- to generate the MANIFEST-FILE of the bundle -->
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.3.7</version>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Bundle-SymbolicName>claimdemo</Bundle-SymbolicName>
-            <Private-Package>org.blogdemo.claimdemo.*</Private-Package>
-            <Import-Package>*</Import-Package>
-          </instructions>
-        </configuration>
-      </plugin>
-
-      <!-- to run the example using mvn camel:run -->
-      <plugin>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-maven-plugin</artifactId>
-        <configuration>
-          <useBlueprint>true</useBlueprint>
-        </configuration>
-      </plugin>
-	  
-	  <!-- For Fabric8 deployment -->
-	  <plugin>
-        <groupId>io.fabric8</groupId>
-        <artifactId>fabric8-maven-plugin</artifactId>      
-      </plugin>
-    </plugins>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.5.1</version>
+          <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <extensions>true</extensions>
+          <version>2.3.7</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-maven-plugin</artifactId>
+          <version>${camel.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>1.7</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <dependencyManagement>
@@ -202,34 +116,42 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core</artifactId>
+        <version>${camel.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-spring</artifactId>
+        <version>${camel.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-test-spring</artifactId>
+        <version>${camel.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-groovy</artifactId>
+        <version>${camel.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-hl7</artifactId>
+        <version>${camel.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-mina2</artifactId>
+        <version>${camel.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-simple</artifactId>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>ca.uhn.hapi</groupId>

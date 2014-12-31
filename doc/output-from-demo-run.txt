@@ -1,0 +1,256 @@
+[kpeeples@localhost fuse-components-hl7]$ ./init.sh
+
+Setting up the JBoss Fuse Camel Component - HL7
+brought to you by,
+Kenneth Peeples
+git@github.com/jbossdemocentral/fuse-components-hl7.git
+
+JBoss Fuse Camel Component - HL7 FUSE is present...
+
+  - creating the demo home directory...
+
+Unpacking new JBoss FUSE...
+
+  - enabling demo accounts logins in users.properties file...
+
+  - making sure 'FUSE' for server is executable...
+
+Go to Project directory
+
+Start compile example project...watch sample test complete
+
+/home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] HL7 Example: Parent POM
+[INFO] HL7 Example: Camel Routes
+[INFO] HL7 Example: Features XML File
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HL7 Example: Parent POM 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ hl7-example ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ hl7-example ---
+[INFO] Installing /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/pom.xml to /home/kpeeples/.m2/repository/org/fusebyexample/examples/hl7-example/1.0.0-SNAPSHOT/hl7-example-1.0.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HL7 Example: Camel Routes 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ hl7-example-camel ---
+[INFO] Deleting /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hl7-example-camel ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hl7-example-camel ---
+[INFO] Compiling 1 source file to /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hl7-example-camel ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ hl7-example-camel ---
+[INFO] Compiling 1 source file to /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hl7-example-camel ---
+[INFO] Surefire report directory: /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.fusebyexample.examples.hl7.HL7RouteTest
+Dec 31, 2014 4:02:14 PM org.springframework.test.context.TestContextManager retrieveTestExecutionListeners
+INFO: Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
+Dec 31, 2014 4:02:14 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/target/classes/META-INF/spring/camel-context.xml]
+1144 [main] INFO org.apache.camel.test.spring.CamelSpringTestContextLoader - Disabling Camel JMX globally for tests by default.  Use the DisableJMX annotation to override the default setting.
+Dec 31, 2014 4:02:15 PM org.springframework.context.support.GenericApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@191ad846: startup date [Wed Dec 31 16:02:15 EST 2014]; root of context hierarchy
+Dec 31, 2014 4:02:15 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@763a631b: defining beans [hl7codec,hl7AckGenerator,hl7FileFilter,template,consumerTemplate,camel-1:beanPostProcessor,camel-1,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+1275 [main] INFO ca.uhn.hl7v2.util.Home - hapi.home is set to /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/.
+1296 [main] INFO ca.uhn.hl7v2.VersionLogger - HAPI version is: 2.1
+1298 [main] INFO ca.uhn.hl7v2.VersionLogger - Default Structure libraries found for HL7 versions 2.1, 2.2, 2.3, 2.3.1, 2.4, 2.5, 2.5.1, 2.6, 
+1540 [main] INFO org.apache.camel.test.spring.CamelSpringTestContextLoader - Setting shutdown timeout to [10 SECONDS] on CamelContext with name [camel-1].
+1541 [main] INFO org.apache.camel.test.spring.CamelSpringTestContextLoader - Enabling lazy loading of type converters on CamelContext with name [camel-1].
+1542 [main] INFO org.apache.camel.test.spring.CamelSpringTestContextLoader - Starting CamelContext with name [camel-1].
+1543 [main] INFO org.apache.camel.spring.SpringCamelContext - Apache Camel 2.12.0.redhat-610379 (CamelContext: camel-1) is starting
+1544 [main] INFO org.apache.camel.management.DefaultManagementStrategy - JMX is disabled
+1752 [main] INFO org.apache.camel.spring.SpringCamelContext - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+1752 [main] INFO org.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+1827 [main] INFO org.apache.camel.component.mina2.Mina2Consumer - Bound to server address: localhost/127.0.0.1:8888 using acceptor: (nio socket acceptor: localAddress(es): [/127.0.0.1:8888], managedSessionCount: 0)
+1830 [main] INFO org.apache.camel.spring.SpringCamelContext - Route: hl7TcpRoute started and consuming from: Endpoint[mina2://tcp://localhost:8888?codec=%23hl7codec&sync=true]
+1842 [main] INFO org.apache.camel.spring.SpringCamelContext - Route: hl7FileRoute started and consuming from: Endpoint[file:///tmp/?delete=true&filter=%23hl7FileFilter&moveFailed=.error]
+1842 [main] INFO org.apache.camel.spring.SpringCamelContext - Route: hl7DirectRoute started and consuming from: Endpoint[direct://hl7Direct]
+1842 [main] INFO org.apache.camel.spring.SpringCamelContext - Route: hl7DirectCBRRoute started and consuming from: Endpoint[direct://hl7DirectCBR]
+1842 [main] INFO org.apache.camel.spring.SpringCamelContext - Total 4 routes, of which 4 is started.
+1849 [main] INFO org.apache.camel.spring.SpringCamelContext - Apache Camel 2.12.0.redhat-610379 (CamelContext: camel-1) started in 0.300 seconds
+1883 [main] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: Endpoint[mock://hl7DirectResponse] is satisfied
+PV1||O|OP^^||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718G|TEST|JBOSS|20061019172719||ADT^A01^ADT_A01|MSGID12349876|P|2.4
+3341 [Camel (camel-1) thread #0 - file:///tmp/] INFO hl7DirectCBRRoute - Transforming message.
+PV1||O|OP||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718|^~\&|FUSEDEMO|ORG|TEST|JBOSS|20061019172719||ADT^A01^ADT_A01|MSGID12349876|P|2.4
+MSA|AA|MSGID12349876) thread #0 - file:///tmp/] INFO hl7DirectRoute - HL7 Response: MSH|^~\&|TEST|JBOSS|FUSEDEMO|ORG|20141231160217.489-0500||ACK^A01|501|P|2.4
+3451 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+3451 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Testing done: testHl7FileRouteValidMessage(org.fusebyexample.examples.hl7.HL7RouteTest)
+3451 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Took: 1.583 seconds (1583 millis)
+3451 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+PV1||O|OP^^||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718ADT_A01|MSGID12349876|P|2.4
+3457 [main] INFO hl7DirectCBRRoute - No transformation necessary.
+MSA|AA|MSGID12349876DirectRoute - HL7 Response: MSH|^~\&|TEST|JBOSS|NOTRANS|ORG|20141231160217.507-0500||ACK^A01|502|P|2.4
+3459 [main] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: Endpoint[mock://hl7DirectResponse] is satisfied
+3459 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+3459 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Testing done: testHl7DirectRouteValidMessageNoTransform(org.fusebyexample.examples.hl7.HL7RouteTest)
+3460 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Took: 0.005 seconds (5 millis)
+3460 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+PV1||O|OP^^||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718^ADT_A01|MSGID12349876|P|2.4
+3465 [main] INFO hl7DirectCBRRoute - Transforming message.
+PV1||O|OP||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|2006101917271819172719||ADT^A01^ADT_A01|MSGID12349876|P|2.4
+MSA|AA|MSGID12349876DirectRoute - HL7 Response: MSH|^~\&|TEST|JBOSS|FUSEDEMO|ORG|20141231160217.521-0500||ACK^A01|503|P|2.4
+3474 [main] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: Endpoint[mock://hl7DirectResponse] is satisfied
+3474 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+3474 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Testing done: testHl7DirectRouteValidMessageWithTransform(org.fusebyexample.examples.hl7.HL7RouteTest)
+3474 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Took: 0.012 seconds (12 millis)
+3474 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+PV1||O|OP^^||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|2006101917271819||ADT^A01^ADT_A01|MSGID12349876|P|2.4
+3510 [pool-3-thread-1] INFO hl7DirectCBRRoute - Transforming message.
+PV1||O|OP||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718BOSS|20061019172719||ADT^A01^ADT_A01|MSGID12349876|P|2.4
+MSA|AA|MSGID123498761] INFO hl7DirectRoute - HL7 Response: MSH|^~\&|TEST|JBOSS|FUSEDEMO|ORG|20141231160217.567-0500||ACK^A01|504|P|2.4
+3520 [main] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: Endpoint[mock://hl7DirectResponse] is satisfied
+3520 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+3521 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Testing done: testHl7TcpRouteValidMessage(org.fusebyexample.examples.hl7.HL7RouteTest)
+3521 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - Took: 0.043 seconds (43 millis)
+3521 [main] INFO org.fusebyexample.examples.hl7.HL7RouteTest - ********************************************************************************
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.626 sec - in org.fusebyexample.examples.hl7.HL7RouteTest
+Dec 31, 2014 4:02:17 PM org.springframework.context.support.GenericApplicationContext doClose
+INFO: Closing org.springframework.context.support.GenericApplicationContext@191ad846: startup date [Wed Dec 31 16:02:15 EST 2014]; root of context hierarchy
+Dec 31, 2014 4:02:17 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@763a631b: defining beans [hl7codec,hl7AckGenerator,hl7FileFilter,template,consumerTemplate,camel-1:beanPostProcessor,camel-1,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+3526 [Thread-1] INFO org.apache.camel.spring.SpringCamelContext - Apache Camel 2.12.0.redhat-610379 (CamelContext: camel-1) is shutting down
+3526 [Thread-1] INFO org.apache.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 4 routes (timeout 10 seconds)
+3530 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: hl7DirectCBRRoute shutdown complete, was consuming from: Endpoint[direct://hl7DirectCBR]
+3531 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: hl7DirectRoute shutdown complete, was consuming from: Endpoint[direct://hl7Direct]
+3536 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: hl7FileRoute shutdown complete, was consuming from: Endpoint[file:///tmp/?delete=true&filter=%23hl7FileFilter&moveFailed=.error]
+3536 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.component.mina2.Mina2Consumer - Unbinding from server address: localhost/127.0.0.1:8888 using acceptor: (nio socket acceptor: localAddress(es): [/127.0.0.1:8888], managedSessionCount: 0)
+3538 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: hl7TcpRoute shutdown complete, was consuming from: Endpoint[mina2://tcp://localhost:8888?codec=%23hl7codec&sync=true]
+3538 [Thread-1] INFO org.apache.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 4 routes completed in 0 seconds
+3541 [Thread-1] INFO org.apache.camel.spring.SpringCamelContext - Apache Camel 2.12.0.redhat-610379 (CamelContext: camel-1) uptime 1.999 seconds
+3541 [Thread-1] INFO org.apache.camel.spring.SpringCamelContext - Apache Camel 2.12.0.redhat-610379 (CamelContext: camel-1) is shutdown in 0.015 seconds
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-bundle-plugin:2.3.7:bundle (default-bundle) @ hl7-example-camel ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ hl7-example-camel ---
+[INFO] Installing /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/target/hl7-example-camel-1.0.0-SNAPSHOT.jar to /home/kpeeples/.m2/repository/org/fusebyexample/examples/hl7-example-camel/1.0.0-SNAPSHOT/hl7-example-camel-1.0.0-SNAPSHOT.jar
+[INFO] Installing /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-camel/pom.xml to /home/kpeeples/.m2/repository/org/fusebyexample/examples/hl7-example-camel/1.0.0-SNAPSHOT/hl7-example-camel-1.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-bundle-plugin:2.3.7:install (default-install) @ hl7-example-camel ---
+[INFO] Installing org/fusebyexample/examples/hl7-example-camel/1.0.0-SNAPSHOT/hl7-example-camel-1.0.0-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HL7 Example: Features XML File 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ hl7-example-features ---
+[INFO] Deleting /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-features/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ hl7-example-features ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hl7-example-features ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ hl7-example-features ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-features/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ hl7-example-features ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ hl7-example-features ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-features/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ hl7-example-features ---
+[INFO] Building jar: /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-features/target/hl7-example-features-1.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:attach-artifact (attach-artifacts) @ hl7-example-features ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ hl7-example-features ---
+[INFO] Installing /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-features/target/hl7-example-features-1.0.0-SNAPSHOT.jar to /home/kpeeples/.m2/repository/org/fusebyexample/examples/hl7-example-features/1.0.0-SNAPSHOT/hl7-example-features-1.0.0-SNAPSHOT.jar
+[INFO] Installing /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-features/pom.xml to /home/kpeeples/.m2/repository/org/fusebyexample/examples/hl7-example-features/1.0.0-SNAPSHOT/hl7-example-features-1.0.0-SNAPSHOT.pom
+[INFO] Installing /home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/project/hl7demo/hl7-example-features/target/classes/features.xml to /home/kpeeples/.m2/repository/org/fusebyexample/examples/hl7-example-features/1.0.0-SNAPSHOT/hl7-example-features-1.0.0-SNAPSHOT-features.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] HL7 Example: Parent POM ........................... SUCCESS [0.291s]
+[INFO] HL7 Example: Camel Routes ......................... SUCCESS [6.845s]
+[INFO] HL7 Example: Features XML File .................... SUCCESS [0.768s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.600s
+[INFO] Finished at: Wed Dec 31 16:02:19 EST 2014
+[INFO] Final Memory: 25M/318M
+[INFO] ------------------------------------------------------------------------
+/home/kpeeples/mystuff/repositories-git/jbossdemocentral/fuse-components-hl7/target/jboss-fuse-6.1.0.redhat-379/bin
+  - Start up Fuse in the background
+  - Install the example, watch the log and move the sample file at the console
+    features:addurl mvn:org.fusebyexample.examples/hl7-example-features/1.0.0-SNAPSHOT/xml/features
+    features:install hl7-example-all
+    log:tail
+  - move the camel-test.hl7 file to /tmp/ while watching the log
+Please wait while JBoss Fuse is loading...
+100% [========================================================================]
+
+      _ ____                  ______
+     | |  _ \                |  ____|             
+     | | |_) | ___  ___ ___  | |__ _   _ ___  ___
+ _   | |  _ < / _ \/ __/ __| |  __| | | / __|/ _ \
+| |__| | |_) | (_) \__ \__ \ | |  | |_| \__ \  __/
+ \____/|____/ \___/|___/___/ |_|   \__,_|___/\___|
+
+  JBoss Fuse (6.1.0.redhat-379)
+  http://www.redhat.com/products/jbossenterprisemiddleware/fuse/
+
+Hit '<tab>' for a list of available commands
+and '[cmd] --help' for help on a specific command.
+
+Open a browser to http://localhost:8181 to access the management console
+
+Create a new Fabric via 'fabric:create'
+or join an existing Fabric via 'fabric:join [someUrls]'
+
+Hit '<ctrl-d>' or 'osgi:shutdown' to shutdown JBoss Fuse.
+
+JBossFuse:karaf@root> features:addurl mvn:org.fusebyexample.examples/hl7-example-features/1.0.0-SNAPSHOT/xml/features
+JBossFuse:karaf@root> features:install hl7-example-all
+Refreshing bundles org.apache.servicemix.bundles.spring-core (120)
+JBossFuse:karaf@root> log:tail
+2014-12-31 16:06:20,758 | INFO  | 0 - file:///tmp/ | hl7DirectRoute                   | ?                                   ? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | HL7PV1||O|OP^^||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718
+2014-12-31 16:06:21,180 | INFO  | 0 - file:///tmp/ | hl7DirectCBRRoute                | ?                                   ? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | Transforming message.
+2014-12-31 16:06:21,249 | INFO  | 0 - file:///tmp/ | hl7DirectCBRRoute                | ?                                   ? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | HL7PV1||O|OP||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718P|2.4
+2014-12-31 16:06:21,273 | INFO  | 0 - file:///tmp/ | hl7DirectRoute                   | ?                                   ? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | HL7MSA|AA|MSGID12349876TEST|JBOSS|FUSEDEMO|ORG|20141231160621.268-0500||ACK^A01|1|P|2.4
+

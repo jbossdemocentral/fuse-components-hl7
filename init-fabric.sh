@@ -11,13 +11,15 @@ FUSE_PROJECT=./project/hl7demo
 FUSE_SERVER_CONF=$FUSE_HOME/etc
 FUSE_SERVER_BIN=$FUSE_HOME/bin
 SRC_DIR=./installs
-PRJ_DIR=./project/hl7demo
+PRJ_DIR=./projects/hl7demo
+
 
 # wipe screen.
 clear 
 
 # add executeable in installs
 chmod +x installs/*.zip
+
 
 echo
 echo "Setting up the ${DEMO}"
@@ -83,21 +85,35 @@ echo "  - making sure 'FUSE' for server is executable..."
 echo
 chmod u+x $FUSE_HOME/bin/start
 
+cd target/$FUSE
+
+echo "  - Start up Fuse in the background"
+echo
+sh bin/start
+
+sleep 15
+
+echo "  - Create Fabric in Fuse"
+echo
+sh bin/client -r 3 -d 20 -u admin -p admin 'fabric:create --wait-for-provisioning'
+
+pwd
+
 echo "Go to Project directory"
 echo      
-cd $PRJ_DIR 
+cd ../../$FUSE_PROJECT 
 
-echo "Start compile example project...watch sample test complete"
-echo  
-pwd
-mvn clean install
+echo "Start compile and deploy failover camel example project to fuse"
+echo         
+mvn io.fabric8:fabric8-maven-plugin:1.2.0.Beta4:deploy
 
-cd ../../$FUSE_SERVER_BIN
-pwd
-echo "  - Start up Fuse in the background"
-echo "  - Install the example, watch the log and move the sample file at the console"
-echo "    features:addurl mvn:org.fusebyexample.examples/hl7-example-features/1.0.0-SNAPSHOT/xml/features"
-echo "    features:install hl7-example-all"
-echo "    log:tail"
-echo "  - move the camel-test.hl7 file to /tmp/ while watching the log"
-./fuse
+cd ../../target/$FUSE
+
+sleep 15 
+
+echo "Add profile to container"
+echo         
+sh bin/client -r 2 -d 40 'container-create-child --profile demo-hl7 --profile jboss-fuse-full root testcon'
+
+echo "To stop the backgroud Fuse process, please go to bin and execute stop"
+echo

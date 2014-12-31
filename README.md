@@ -22,23 +22,24 @@ Add fabric server passwords for Maven Plugin to your ~/.m2/settings.xml file the
 
 run 
 ```
-run.sh
+init.sh
 ```
+NOTE: init-fabric.sh will be future for a fabric example.  menu.sh will be future for building a local install or docker install.
 
-It will setup JBoss Fuse, install fabric, build and deploy the profile. 
+The environment will be setup and Fuse will be started.  Then follow the following steps:
 
-To run the demo, in browser enter http://localhost:8181 and login with ID/PWD of admin/admin
-
-Under Runtime, you will see list of containers, and click on the small icon on the righthand-side of the testcon container  
-![Fabric list]()
-You can also checkout the registry  
-![Fabric list]()
-
-And either use browser to run it   
-![Fabric list]()
-Or you can use HAPITest  
-![Fabric list]()
-
+Step 1:  
+  Enter the following in the console: features:addurl mvn:org.fusebyexample.examples/hl7-example-features/1.0.0-SNAPSHOT/xml/features"
+Step 2:  
+  Enter the following in the console: features:install hl7-example-all"
+Step 3:  
+  Enter the following in the console: log:tail"
+Step 4:  
+  Move the camel-test.hl7 file to /tmp/ then watch the log for the following output
+2014-12-31 16:08:17,040 | INFO  | 0 - file:///tmp/ | hl7DirectRoute| ?? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | HL7PV1||O|OP^^||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718
+2014-12-31 16:08:17,044 | INFO  | 0 - file:///tmp/ | hl7DirectCBRRoute| ?? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | Transforming message.
+2014-12-31 16:08:17,051 | INFO  | 0 - file:///tmp/ | hl7DirectCBRRoute| ?? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | HL7PV1||O|OP||||4652^Paulson^Robert|||OP|||||||||9|||||||||||||||||||||||||20061019172717|20061019172718P|2.4
+2014-12-31 16:08:17,053 | INFO  | 0 - file:///tmp/ | hl7DirectRoute| ?? | 142 - org.apache.camel.camel-core - 2.12.0.redhat-610379 | HL7MSA|AA|MSGID12349876TEST|JBOSS|FUSEDEMO|ORG|20141231160817.052-0500||ACK^A01|2|P|2.4
 
 Supporting Material
 -------------------

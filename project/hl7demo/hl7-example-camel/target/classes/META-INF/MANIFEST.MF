@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1420059738624
+Build-Jdk: 1.7.0_60
+Built-By: kpeeples
+Bundle-ManifestVersion: 2
+Bundle-Name: HL7 Example: Camel Routes
+Bundle-SymbolicName: org.fusebyexample.examples.hl7-example-camel
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.fusebyexample.examples.hl7;uses:="ca.uhn.hl7v2,ca.uh
+ n.hl7v2.model";version="1.0.0.SNAPSHOT"
+Import-Package: ca.uhn.hl7v2,ca.uhn.hl7v2.model,groovy.lang;version="[2.
+ 1,3)",org.apache.camel.component.file;version="[2.12,3)",org.apache.cam
+ el.component.hl7;version="[2.12,3)",org.codehaus.groovy.reflection;vers
+ ion="[2.1,3)",org.codehaus.groovy.runtime;version="[2.1,3)",org.codehau
+ s.groovy.runtime.callsite;version="[2.1,3)",org.codehaus.groovy.runtime
+ .typehandling;version="[2.1,3)"
+Tool: Bnd-1.50.0
