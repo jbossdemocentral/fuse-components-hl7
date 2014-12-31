@@ -22,30 +22,30 @@ Add fabric server passwords for Maven Plugin to your ~/.m2/settings.xml file the
 
 run 
 ```
-init.sh
+run.sh
 ```
 
 It will setup JBoss Fuse, install fabric, build and deploy the profile. 
 
 To run the demo, in browser enter http://localhost:8181 and login with ID/PWD of admin/admin
 
-Under Runtime, you will see list of containers, and click on the small icon on the righthand-side of the testcon container
+Under Runtime, you will see list of containers, and click on the small icon on the righthand-side of the testcon container  
 ![Fabric list]()
-You can also checkout the registry
+You can also checkout the registry  
 ![Fabric list]()
 
-And either use browser to run it 
+And either use browser to run it   
 ![Fabric list]()
-Or you can use HAPITest
+Or you can use HAPITest  
 ![Fabric list]()
 
 
 Supporting Material
 -------------------
 
-Presentation -
-Blog -
-Videos - 
+Presentation -  
+Blog -  
+Videos -   
 
 
 Released versions
