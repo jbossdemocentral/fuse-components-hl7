@@ -1,6 +1,5 @@
 Fuse Components - HL7
 ======================================================
-Currently in progress - Check back later
 
 This example will run a HL7 message through a Camel Route to show how to easily use the HL7 component.
 
