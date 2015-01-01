@@ -98,6 +98,5 @@ echo "  - Start up Fuse in the background"
 echo "  - Install the example, watch the log and move the sample file at the console"
 echo "    features:addurl mvn:org.fusebyexample.examples/hl7-example-features/1.0.0-SNAPSHOT/xml/features"
 echo "    features:install hl7-example-all"
-echo "    log:tail"
-echo "  - move the camel-test.hl7 file to /tmp/ while watching the log"
+echo "  - move the camel-test.hl7 file to /tmp/ while watching the fuse.log in the log directory"
 ./fuse

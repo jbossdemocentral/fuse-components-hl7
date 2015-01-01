@@ -31,7 +31,7 @@
     <property name="includes" value="*.hl7" />
   </bean>
 
-  <camelContext xmlns="http://camel.apache.org/schema/spring">
+  <camelContext trace="true" xmlns="http://camel.apache.org/schema/spring">
     <route id="hl7TcpRoute">
         <from uri="mina2:tcp://localhost:8888?sync=true&amp;codec=#hl7codec"/>
         <to uri="direct:hl7Direct"/>
