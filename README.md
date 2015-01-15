@@ -11,9 +11,9 @@ Download JBoss Fuse from jboss.org, and place the downloaded zip file under inst
 
 run 
 ```
-init.sh
+init.sh or init.bat
 ```
-NOTE: init-fabric.sh will be future for a fabric example.  menu.sh will be future for building a local install or docker install.
+NOTE: init-fabric.sh/init-fabric.bat will be future for a fabric example.  menu.sh will be future for building a local install or docker install.
 
 The environment will be setup and Fuse will be started.  Then follow the following steps:
 
